@@ -236,7 +236,7 @@ export default function HashGeneratorPage() {
             <Stack spacing={2}>
               {results.sha1 && (
                 <Paper variant="outlined" sx={{ p: 2 }}>
-                  <Typography variant="body2" fontWeight={600} gutterBottom>
+                  <Typography variant="body2" sx={{ fontWeight: 600 }} gutterBottom>
                     SHA-1:
                   </Typography>
                   <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
@@ -262,7 +262,7 @@ export default function HashGeneratorPage() {
 
               {results.sha256 && (
                 <Paper variant="outlined" sx={{ p: 2 }}>
-                  <Typography variant="body2" fontWeight={600} gutterBottom>
+                  <Typography variant="body2" sx={{ fontWeight: 600 }} gutterBottom>
                     SHA-256:
                   </Typography>
                   <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
@@ -288,7 +288,7 @@ export default function HashGeneratorPage() {
 
               {results.sha512 && (
                 <Paper variant="outlined" sx={{ p: 2 }}>
-                  <Typography variant="body2" fontWeight={600} gutterBottom>
+                  <Typography variant="body2" sx={{ fontWeight: 600 }} gutterBottom>
                     SHA-512:
                   </Typography>
                   <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
