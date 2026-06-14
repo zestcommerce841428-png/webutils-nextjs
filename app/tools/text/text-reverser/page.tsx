@@ -31,7 +31,7 @@ export default function TextReverserPage() {
           />
         </Paper>
 
-        <Stack direction="row" spacing={2} flexWrap="wrap">
+        <Stack direction="row" spacing={2} sx={{ flexWrap: 'wrap' }}>
           <Button variant="outlined" onClick={() => setText(reverse())}>Reverse Characters</Button>
           <Button variant="outlined" onClick={() => setText(reverseWords())}>Reverse Words</Button>
           <Button variant="outlined" onClick={() => setText(reverseLines())}>Reverse Lines</Button>
