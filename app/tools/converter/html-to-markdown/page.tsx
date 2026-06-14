@@ -6,7 +6,7 @@ import {
   TextField,
   Typography,
   Paper,
-  Grid2 as Grid,
+  Stack,
   ToggleButtonGroup,
   ToggleButton,
   Alert,
@@ -118,8 +118,8 @@ export default function HTMLToMarkdownPage() {
       categoryName="Converter"
       onCopy={handleCopy}
     >
-      <Grid container spacing={3}>
-        <Grid size={{ xs: 12 }}>
+      <Stack spacing={3}>
+        <Box>
           <Box sx={{ mb: 2 }}>
             <ToggleButtonGroup
               value={mode}
@@ -131,9 +131,10 @@ export default function HTMLToMarkdownPage() {
               <ToggleButton value="strict">Strict (Remove All Tags)</ToggleButton>
             </ToggleButtonGroup>
           </Box>
-        </Grid>
+        </Box>
 
-        <Grid size={{ xs: 12, md: 6 }}>
+        <Stack direction={{ xs: 'column', md: 'row' }} spacing={3}>
+          <Box sx={{ flex: 1 }}>
           <Paper sx={{ p: 3 }}>
             <Typography variant="h6" gutterBottom>
               HTML Input
@@ -148,9 +149,9 @@ export default function HTMLToMarkdownPage() {
               sx={{ fontFamily: 'monospace', fontSize: '0.875rem' }}
             />
           </Paper>
-        </Grid>
+          </Box>
 
-        <Grid size={{ xs: 12, md: 6 }}>
+          <Box sx={{ flex: 1 }}>
           <Paper sx={{ p: 3 }}>
             <Typography variant="h6" gutterBottom>
               Markdown Output
@@ -168,8 +169,9 @@ export default function HTMLToMarkdownPage() {
               }}
             />
           </Paper>
-        </Grid>
-      </Grid>
+          </Box>
+        </Stack>
+      </Stack>
 
       <Alert severity="info" sx={{ mt: 3 }}>
         <Typography variant="body2">
